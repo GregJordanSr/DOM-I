@@ -40,3 +40,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+let nav = Array.from(document.querySelectorAll('a'));
+console.log(nav);
+
+nav.filter((item) => item.includes('nav'))
+.map((item) => {
+  console.log(siteContent['nav']);
+  item.textContent = siteContent['nav']
+})
