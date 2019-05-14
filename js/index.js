@@ -41,14 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+
+// Navigation Bar
 let nav = Array.from(document.querySelectorAll('a'));
 
-
 nav.forEach((item, index) => item.textContent =  siteContent.nav[`nav-item-${index + 1}`] )
-nav.forEach((item, index) => item.style.color =  `green`);
+nav.forEach((item) => item.style.color =  `green`);
+
+
 
 // Add 2 elements to Nav bar 
-
 const nav1 = document.getElementsByTagName('nav')[0];
 
 const navI = document.createElement('a');
@@ -63,15 +65,16 @@ nav1.prepend(navI);
 nav1.append(navI2);
 
 
-
+// Header img
 let imgSrc = document.getElementById('cta-img');
 imgSrc.setAttribute('src', siteContent.cta["img-src"]);
 
+// Call-To-Action Button
 let mainH1 = (document.querySelector('.cta h1').textContent = siteContent.cta['h1'])
 let ctaButton = (document.querySelector('.cta .cta-text button').textContent = siteContent.cta['button'])
 
-// Top Content
 
+// Top Content
 let topContent = document.querySelectorAll('.top-content .text-content');
 
 topContent[0].querySelector('h4').textContent = siteContent['main-content']['features-h4'];
@@ -80,9 +83,10 @@ topContent[0].querySelector('p').textContent = siteContent['main-content']['abou
 topContent[1].querySelector('h4').textContent = siteContent['main-content']['about-h4'];
 topContent[1].querySelector('p').textContent = siteContent['main-content']['about-content'];
 
-// Middle img 
 
+// Middle img 
 const middleImg = document.querySelector('.middle-img').src = siteContent['main-content']['middle-img-src'];
+
 
 // Bottom content and Contact 
   const bottomContent = document.querySelectorAll('.bottom-content .text-content');
@@ -104,8 +108,8 @@ const middleImg = document.querySelector('.middle-img').src = siteContent['main-
   contactSectionParagraph[1].textContent = siteContent.contact['phone'];
   contactSectionParagraph[2].textContent = siteContent.contact['email'];
 
-  // Footer
 
+  // Footer
   const footer = document.querySelector('footer p');
   footer.textContent = siteContent.footer['copyright']
 
